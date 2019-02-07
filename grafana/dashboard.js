@@ -64,9 +64,8 @@ Dashboard.prototype._initRows = function _initRows(opts) {
     }
 };
 
-Dashboard.prototype.getFolderId = function getFolderId(opts, cb) {
-    var self = this;
-    if (!self.folder) return null;
+Dashboard.prototype.getFolderId = function getFolderId() {
+    if (!this.folder) return null;
 
     var folder = new Folder.Folder({name: this.folder});
     return (self, folder.getFolderId(opts, cb));
