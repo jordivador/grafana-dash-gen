@@ -68,7 +68,7 @@ Dashboard.prototype.getFolderId = function getFolderId() {
     if (!this.folder) return null;
 
     var folder = new Folder.Folder({name: this.folder});
-    return (self, folder.getFolderId(opts, cb));
+    return folder.getFolderId(opts, cb);
 }
 
 Dashboard.prototype._initTemplating = function _initRows(opts) {
