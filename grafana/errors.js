@@ -58,10 +58,19 @@ var NoFolderException = TypedError({
     folder: null
 });
 
+var PublishError = TypedError({
+    type: 'grafana.errors.PublishError',
+    message: 'Some error [{error}] happened trying to publish {dashboard}, request-status : [{response}]',
+    dashboard: null,
+    error: null,
+    response: null
+});
+
 module.exports = {
     UnfulfilledRequirement: UnfulfilledRequirement,
     InvalidState: InvalidState,
     Misconfigured: Misconfigured,
     ApiError: ApiError,
-    NoFolderException: NoFolderException
+    NoFolderException: NoFolderException,
+    PublishError: PublishError
 };

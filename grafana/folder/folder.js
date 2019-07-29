@@ -64,7 +64,7 @@ Folder.prototype.getFolderId = function getFolderId(opts) {
 
     if (!res || res && res.statusCode !== 200) {
         throw errors.ApiError({
-            apiCall: "GET "+ url + "/api/folders",
+            apiCall: "GET "+ cfg.url + "/api/folders",
             reason: res.body.toString(),
             code: res.statusCode
         });
