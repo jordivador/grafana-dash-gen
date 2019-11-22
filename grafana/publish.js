@@ -24,7 +24,7 @@ var config = require('./config');
 var errors = require('./errors');
 
 /* eslint-disable max-statements, max-len, no-console, no-undef */
-async function publish(dashboard, opts) {
+function publish(dashboard, opts) {
     return new Promise(function (resolve, reject) {
         opts = opts || {};
 
